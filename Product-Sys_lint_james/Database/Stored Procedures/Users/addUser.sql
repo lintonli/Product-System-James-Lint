@@ -1,0 +1,14 @@
+USE ProductSystem;
+GO
+CREATE OR ALTER PROCEDURE addUser(
+    @ID VARCHAR (255),
+    @NAME VARCHAR (255),
+    @EMAIL VARCHAR (255),
+    @PASSWORD VARCHAR (255))
+AS
+BEGIN
+    INSERT INTO Users
+        (ID, UNAME, Email, UPASSWORD)
+    VALUES
+        (@ID, @NAME, @EMAIL, @PASSWORD)
+END

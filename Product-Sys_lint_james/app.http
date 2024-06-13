@@ -1,0 +1,109 @@
+GET http://localhost:4000/categories
+
+####
+
+POST http://localhost:4000/categories
+Content-Type: application/json
+
+{
+    "NAME": "dummy category"
+}
+
+#######
+
+GET http://localhost:4000/categories/622b9278-a946-4733-925d-a88814ff565d
+
+
+#####
+
+PATCH  http://localhost:4000/categories/a66530a0-1c50-4236-b0a0-06218dc366f2
+Content-Type: application/json
+
+{
+    "NAME": "Books"
+}
+
+
+######
+ DELETE  http://localhost:4000/categories/3883e64e-690d-4f91-b4a7-a4beae7be813
+
+
+########
+#PRODUCT METHODS START HERE
+
+GET http://localhost:4000/products
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTVUIiOiJhNTUzY2Y5Zi1mNzRiLTRmMWEtOGNiNS1jNmYxYmI4NjhhMTkiLCJVTkFNRSI6IkphbWVzIiwiaWF0IjoxNzE4MjAyMDgwLCJleHAiOjE3MTgyMDU2ODB9.i2rNOnPbUelctRthh8IiVRmqa8PsNXpHlyW2nQp4Cxk
+####
+
+POST http://localhost:4000/products
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTVUIiOiJhNTUzY2Y5Zi1mNzRiLTRmMWEtOGNiNS1jNmYxYmI4NjhhMTkiLCJVTkFNRSI6IkphbWVzIiwiaWF0IjoxNzE4MjAyMDgwLCJleHAiOjE3MTgyMDU2ODB9.i2rNOnPbUelctRthh8IiVRmqa8PsNXpHlyW2nQp4Cxk
+Content-Type: application/json
+
+
+{
+    "PNAME": "Television",   
+    "PRICE":"26000.00",
+    "CATEGORYID":"5888b6e2-958f-4ba0-b8aa-2bb16eacb1da"
+}
+
+#######
+
+
+
+GET http://localhost:4000/products/95ee46dd-d852-4438-abd1-cebab1f8dfba
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTVUIiOiJhNTUzY2Y5Zi1mNzRiLTRmMWEtOGNiNS1jNmYxYmI4NjhhMTkiLCJVTkFNRSI6IkphbWVzIiwiaWF0IjoxNzE4MjAyMDgwLCJleHAiOjE3MTgyMDU2ODB9.i2rNOnPbUelctRthh8IiVRmqa8PsNXpHlyW2nQp4Cxk
+
+#####
+
+PATCH  http://localhost:4000/products/95ee46dd-d852-4438-abd1-cebab1f8dfba
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTVUIiOiJhNTUzY2Y5Zi1mNzRiLTRmMWEtOGNiNS1jNmYxYmI4NjhhMTkiLCJVTkFNRSI6IkphbWVzIiwiaWF0IjoxNzE4MjAyMDgwLCJleHAiOjE3MTgyMDU2ODB9.i2rNOnPbUelctRthh8IiVRmqa8PsNXpHlyW2nQp4Cxk
+Content-Type: application/json
+
+{
+    "PNAME": "Tuxedo suit",   
+    "PRICE":"40000.00",
+    "CATEGORYID":"622b9278-a946-4733-925d-a88814ff565d"
+}
+
+
+####
+
+DELETE http://localhost:4000/products/9873f11e-91e7-424c-9ed8-9bf0b92f3d9d
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTVUIiOiJhNTUzY2Y5Zi1mNzRiLTRmMWEtOGNiNS1jNmYxYmI4NjhhMTkiLCJVTkFNRSI6IkphbWVzIiwiaWF0IjoxNzE4MjAyMDgwLCJleHAiOjE3MTgyMDU2ODB9.i2rNOnPbUelctRthh8IiVRmqa8PsNXpHlyW2nQp4Cxk
+
+
+#########
+
+# Get by category id
+
+GET http://localhost:4000/products/category/5888b6e2-958f-4ba0-b8aa-2bb16eacb1da
+
+####
+
+
+# USER METHODS START HERE
+
+GET http://localhost:4000/auth
+
+####
+
+POST http://localhost:4000/auth/register
+Content-Type: application/json
+
+{
+    "NAME": "Linton",
+    "EMAIL": "lintonli162@gmail.com",
+    "PASSWORD": "Lint@123"
+}
+
+#######
+
+POST http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+  
+     "EMAIL": "lintonli162@gmail.com",
+    "PASSWORD": "Lint@123"
+}
+

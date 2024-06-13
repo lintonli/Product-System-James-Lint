@@ -1,0 +1,8 @@
+USE ProductSystem;
+GO
+CREATE OR ALTER PROCEDURE  deleteProduct(@ID VARCHAR(255))
+AS
+BEGIN
+    DELETE FROM Products WHERE ID=@ID;
+END
+
