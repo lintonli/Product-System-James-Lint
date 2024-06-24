@@ -1,0 +1,40 @@
+.display-port{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
+    gap: 20px;
+}
+
+.add-product-view{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 255, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sign-up-view{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 255, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+}
+
