@@ -1,0 +1,22 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div>
+    <input type="text" formControlName="name" placeholder="Product Name">
+    <br><br>
+    <input type="number" formControlName="price" placeholder="Product Price">
+    <div *ngIf="form.get('price')?.touched && form.get('price')?.invalid">
+    <p *ngIf="form.get('price')?.hasError('required')">Price is required</p>
+    <p *ngIf="form.get('price')?.hasError('pattern')">Only numbers allowed</p>
+    </div>
+    </div>
+    <br><br>
+    <div>
+    <label for="">Select Category</label>
+    <br><br>
+    <select formControlName="category" placeholder="">
+    <option value="" disabled selected>Select Category</option>
+    <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+    </select>
+    </div>
+    <br><br>
+    <input type="submit" value="Add Product">
+    </form>
